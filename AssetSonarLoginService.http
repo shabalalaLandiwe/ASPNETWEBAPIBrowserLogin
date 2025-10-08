@@ -1,0 +1,6 @@
+@AssetSonarLoginService_HostAddress = http://localhost:5124
+
+GET {{AssetSonarLoginService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
