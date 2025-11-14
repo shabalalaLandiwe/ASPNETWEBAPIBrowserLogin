@@ -6,7 +6,27 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "Auditing API",
+        Description = "An ASP.NET Core Web API for managing Todo items",
+        TermsOfService = new Uri("https://example.com/terms"),
+        Contact = new OpenApiContact
+        {
+            Name = "Landiwe Shabalala",
+            Url = new Uri("https://example.com/contact")
+        },
+        License = new OpenApiLicense
+        {
+            Name = "Licensed under XYZ",
+            Url = new Uri("https://example.com/license")
+        }
+    });
+});
+
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -21,7 +41,10 @@ if (app.Environment.IsDevelopment())
     // Enable the middleware for serving the generated JSON document and the Swagger UI
     app.UseSwagger();
     app.UseSwaggerUI();
+
 }
+
+
 
 app.UseHttpsRedirection();
 
@@ -43,6 +66,7 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+
 
 app.Run();
 
