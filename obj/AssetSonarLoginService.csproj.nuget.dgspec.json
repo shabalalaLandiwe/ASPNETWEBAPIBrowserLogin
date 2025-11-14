@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Landiwe Shabalala\\AssetSonarLoginService\\AssetSonarLoginService.csproj": {}
+    "C:\\Users\\Landiwe Shabalala\\Downloads\\LandiweShabalalaprojects\\Projects\\AssetSonarLoginService\\AssetSonarLoginService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Landiwe Shabalala\\AssetSonarLoginService\\AssetSonarLoginService.csproj": {
+    "C:\\Users\\Landiwe Shabalala\\Downloads\\LandiweShabalalaprojects\\Projects\\AssetSonarLoginService\\AssetSonarLoginService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Landiwe Shabalala\\AssetSonarLoginService\\AssetSonarLoginService.csproj",
+        "projectUniqueName": "C:\\Users\\Landiwe Shabalala\\Downloads\\LandiweShabalalaprojects\\Projects\\AssetSonarLoginService\\AssetSonarLoginService.csproj",
         "projectName": "AssetSonarLoginService",
-        "projectPath": "C:\\Users\\Landiwe Shabalala\\AssetSonarLoginService\\AssetSonarLoginService.csproj",
+        "projectPath": "C:\\Users\\Landiwe Shabalala\\Downloads\\LandiweShabalalaprojects\\Projects\\AssetSonarLoginService\\AssetSonarLoginService.csproj",
         "packagesPath": "C:\\Users\\Landiwe Shabalala\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Landiwe Shabalala\\AssetSonarLoginService\\obj\\",
+        "outputPath": "C:\\Users\\Landiwe Shabalala\\Downloads\\LandiweShabalalaprojects\\Projects\\AssetSonarLoginService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Landiwe Shabalala\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -55,6 +55,10 @@
             "Microsoft.Playwright": {
               "target": "Package",
               "version": "[1.55.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
@@ -76,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
