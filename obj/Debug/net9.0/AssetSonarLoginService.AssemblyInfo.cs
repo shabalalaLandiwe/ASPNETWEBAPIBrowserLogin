@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AssetSonarLoginService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+353f59f6fc9842fe3825a27866bf2c10b9eb239f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a63a5ead855868e725196c94290fea9e9516169")]
 [assembly: System.Reflection.AssemblyProductAttribute("AssetSonarLoginService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AssetSonarLoginService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

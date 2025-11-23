@@ -1,76 +1,84 @@
-//  configuration action passed to the AddSwaggerGen method adds information such as the author, license, and description.
-using Microsoft.OpenApi.Models;
-var builder = WebApplication.CreateBuilder(args);
+// //  configuration action passed to the AddSwaggerGen method adds information such as the author, license, and description.
+// using Microsoft.OpenApi.Models;
+// var builder = WebApplication.CreateBuilder(args);
 
-//  Swagger generator 
-builder.Services.AddControllers();
+// //  Swagger generator 
+// builder.Services.AddControllers();
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
-{
-    options.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Version = "v1",
-        Title = "Auditing API",
-        Description = "An ASP.NET Core Web API for managing Todo items",
-        TermsOfService = new Uri("https://example.com/terms"),
-        Contact = new OpenApiContact
-        {
-            Name = "Landiwe Shabalala",
-            Url = new Uri("https://example.com/contact")
-        },
-        License = new OpenApiLicense
-        {
-            Name = "Licensed under XYZ",
-            Url = new Uri("https://example.com/license")
-        }
-    });
-});
+// builder.Services.AddEndpointsApiExplorer();
+// builder.Services.AddSwaggerGen(options =>
+// {
+//     options.SwaggerDoc("v1", new OpenApiInfo
+//     {
+//         Version = "v1",
+//         Title = "Auditing API",
+//         Description = "An ASP.NET Core Web API for managing Todo items",
+//         TermsOfService = new Uri("https://example.com/terms"),
+//         Contact = new OpenApiContact
+//         {
+//             Name = "Landiwe Shabalala",
+//             Url = new Uri("https://example.com/contact")
+//         },
+//         License = new OpenApiLicense
+//         {
+//             Name = "Licensed under XYZ",
+//             Url = new Uri("https://example.com/license")
+//         }
+//     });
+// });
 
-
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-// builder.Services.AddOpenApi();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    // app.MapOpenApi(); - for minimal Open API extension
-    // Enable the middleware for serving the generated JSON document and the Swagger UI
-    app.UseSwagger();
-    app.UseSwaggerUI();
-
-}
+// //Reflection is used to build an XML file name matching that of the web API project
+// // The AppContext.BaseDirectory property is used to construct a path to the XML file.
+// var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+//     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 
 
+// // Add services to the container.
+// // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+// // builder.Services.AddOpenApi();
 
-app.UseHttpsRedirection();
+// var app = builder.Build();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+// // Configure the HTTP request pipeline.
+// if (app.Environment.IsDevelopment())
+// {
+//     // app.MapOpenApi(); - for minimal Open API extension
+//     // Enable the middleware for serving the generated JSON document and the Swagger UI
+//     app.UseSwagger();
+//     app.UseSwaggerUI();
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+// }
 
 
-app.Run();
 
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+
+// // USES OPENAPI "map" to output
+
+// // app.UseHttpsRedirection();
+
+// // var summaries = new[]
+// // {
+// //     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+// // };
+
+// // app.MapGet("/weatherforecast", () =>
+// // {
+// //     var forecast =  Enumerable.Range(1, 5).Select(index =>
+// //         new WeatherForecast
+// //         (
+// //             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+// //             Random.Shared.Next(-20, 55),
+// //             summaries[Random.Shared.Next(summaries.Length)]
+// //         ))
+// //         .ToArray();
+// //     return forecast;
+// // })
+// // .WithName("GetWeatherForecast");
+
+
+// //     app.Run();
+
+// // record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+// // {
+// //     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+// // }
